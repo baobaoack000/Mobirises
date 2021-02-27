@@ -47,6 +47,10 @@ jobs:
         uses: CDNievas/heroku-action@v1.0
         with:
           heroku_email: "baobaoack000@gmail.com"
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{secrets."0a3efa20-0a3efa20a3efa2"}}
           heroku_app_name: "myheroku-new01"
+          useforce: true,
+          dynamicFiles: true,
+          procfile: "worker: npm start",
+          buildpacks: "['https://github.com/heroku/heroku-buildpack-nodejs.git']"
 
